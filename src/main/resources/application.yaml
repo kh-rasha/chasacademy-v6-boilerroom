@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: coursesystem
+  datasource:
+    url: jdbc:postgresql://localhost:5432/coursesystem
+    username: postgres
+    password: ${PG_PASSWORD}
+  jpa:
+    hibernate.ddl-auto: create
+    show-sql: true
+    properties.hibernate.format_sql: true
