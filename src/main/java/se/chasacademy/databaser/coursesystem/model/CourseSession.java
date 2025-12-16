@@ -16,10 +16,12 @@ public class CourseSession {
     @Column(nullable=false)
     private LocalDateTime date;
 
+    // många kurstillfällen -> en kurs
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "course_id", nullable = false)
     private Course course;
 
+    // många kurstillfällen -> en lokal
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "course_id", nullable = false)
     private Room room;
