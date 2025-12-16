@@ -21,6 +21,7 @@ public class CourseSession {
     @JoinColumn(name = "course_id", nullable = false)
     private Course course;
 
+    // course_session är den ägande sidan därav att optional används, mappedBy används på den inversen sidan
     // många kurstillfällen -> en lokal
     // optional =false -> relationen får ej va NULL
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
