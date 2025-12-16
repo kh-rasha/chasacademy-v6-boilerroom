@@ -29,5 +29,47 @@ public class Room {
     @OneToMany(mappedBy = "room", fetch = FetchType.LAZY)
     private List<CourseSession> sessions = new ArrayList<>();
 
-    // getters & setters
+    // ===== Getters =====
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public List<CourseSession> getSessions() {
+        return sessions;
+    }
+
+    // ===== Setters =====
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public void setSessions(List<CourseSession> sessions) {
+        this.sessions = sessions;
+    }
 }
