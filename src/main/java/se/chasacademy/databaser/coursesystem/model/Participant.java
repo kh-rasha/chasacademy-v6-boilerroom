@@ -49,6 +49,22 @@ public class Participant {
         return courses;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setCourses(Set<Course> courses) {
+        this.courses = courses;
+    }
+
     // Optional: håll relationen synkad på båda sidor (om du vill)
     public void addCourse(Course course) {
         courses.add(course);
