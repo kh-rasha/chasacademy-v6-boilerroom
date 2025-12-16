@@ -25,7 +25,7 @@ public class Participant {
     @ManyToMany(mappedBy = "participants")
     private Set<Course> courses = new HashSet<>();
 
-    protected Participant() {
+    public Participant() {
         // JPA
     }
 
