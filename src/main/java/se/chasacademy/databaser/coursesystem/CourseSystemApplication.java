@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import se.chasacademy.databaser.coursesystem.model.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @SpringBootApplication
