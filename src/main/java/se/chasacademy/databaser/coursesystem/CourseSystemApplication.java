@@ -1,5 +1,6 @@
 package se.chasacademy.databaser.coursesystem;
 
+import jakarta.transaction.Transactional;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -36,6 +37,7 @@ public class CourseSystemApplication implements CommandLineRunner {
 	}
 
 	@Override
+    @Transactional //Håller sessions öppen under hela run()
 	public void run(String... args) {
 
         // --------------------
