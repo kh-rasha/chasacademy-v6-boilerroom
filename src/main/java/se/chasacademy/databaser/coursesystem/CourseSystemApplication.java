@@ -11,7 +11,25 @@ import java.util.List;
 
 @SpringBootApplication
 public class CourseSystemApplication implements CommandLineRunner {
+    private final TeacherRepository teacherRepo;
+    private final CourseRepository courseRepo;
+    private final ParticipantRepository participantRepo;
+    private final RoomRepository roomRepo;
+    private final CourseSessionRepository sessionRepo;
 
+    public CourseSystemApplication(
+            TeacherRepository teacherRepo,
+            CourseRepository courseRepo,
+            ParticipantRepository participantRepo,
+            RoomRepository roomRepo,
+            CourseSessionRepository sessionRepo) {
+
+        this.teacherRepo = teacherRepo;
+        this.courseRepo = courseRepo;
+        this.participantRepo = participantRepo;
+        this.roomRepo = roomRepo;
+        this.sessionRepo = sessionRepo;
+        }
 
 	public static void main(String[] args) {
 		SpringApplication.run(CourseSystemApplication.class, args);
