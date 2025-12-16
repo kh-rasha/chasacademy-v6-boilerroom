@@ -22,8 +22,11 @@ public class CourseSession {
     private Course course;
 
     // många kurstillfällen -> en lokal
+    // optional =false -> relationen får ej va NULL
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
-    @JoinColumn(name = "course_id", nullable = false)
+    //fetch styr när den relaterade entiteten hämtas från databasen
+    //lazy = laddas först när den används, t.ex session.getRoom()
+    @JoinColumn(name = "room_id", nullable = false)
     private Room room;
 
     public Long getId() {return id;}
