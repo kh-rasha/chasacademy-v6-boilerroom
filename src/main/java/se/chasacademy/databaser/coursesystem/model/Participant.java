@@ -18,6 +18,7 @@ public class Participant {
     @Column(nullable = false)
     private String fullName;
 
+    @NotNull
     @Column(nullable = false, unique = true)
     private String email;
 
